@@ -1,0 +1,24 @@
+@@ -178,6 +178,8 @@
+         anchors {
+             left: parent.left
+             right: parent.right
++            // HAX: extra margin for right side of curved screen corners
++            rightMargin: expanded ? 0 : units.gu(3.8)
+         }
+         expanded: false
+         enableLateralChanges: false
+diff --color -ru a/usr/share/unity8/Shell.qml b/usr/share/unity8/Shell.qml
+--- a/usr/share/unity8/Shell.qml	2021-01-14 18:25:16.111002000 +0200
++++ b/usr/share/unity8/Shell.qml	2021-01-18 01:04:10.604325216 +0200
+@@ -519,8 +519,9 @@
+             anchors.fill: parent //because this draws indicator menus
+ 
+             mode: shell.usageScenario == "desktop" ? "windowed" : "staged"
+-            minimizedPanelHeight: units.gu(3)
+-            expandedPanelHeight: units.gu(7)
++            // HAX: match panel height with notch & add extra space for it in expanded mode
++            minimizedPanelHeight: units.gu(3.9)
++            expandedPanelHeight: units.gu(7) + (shell.orientationAngle == 0 ? minimizedPanelHeight : 0)
+             applicationMenuContentX: launcher.lockedVisible ? launcher.panelWidth : 0
+ 
+             indicators {
