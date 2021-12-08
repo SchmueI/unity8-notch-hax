@@ -20,7 +20,7 @@ diff --color -ru a/usr/share/unity8/Panel/PanelBar.qml b/usr/share/unity8/Panel/
              anchors.fill: parent
 +            // HAX: offset items to match expanded panel mode while oriented upright
 +            // FIXME: make it possible to scroll using the empty space above
-+            anchors.topMargin: (expanded && shell.orientationAngle == 0) ? 80 : 0
++            anchors.topMargin: (expanded && shell.orientationAngle == 0) ? 100 : 0
              contentWidth: row.width
              contentX: d.combinedOffset
              interactive: false
@@ -32,7 +32,7 @@ diff --color -ru a/usr/share/unity8/Panel/PanelMenu.qml b/usr/share/unity8/Panel
              left: parent.left
              right: parent.right
 +            // HAX: extra margin for right side of curved screen corners
-+            rightMargin: expanded ? 0 : units.gu(5.8)
++            rightMargin: expanded ? 0 : units.gu(9.8)
          }
          expanded: false
          enableLateralChanges: false
