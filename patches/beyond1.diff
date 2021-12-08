@@ -8,9 +8,9 @@ diff --color -ru a/usr/share/unity8/Panel/Panel.qml b/usr/share/unity8/Panel/Pan
                  left: parent.left
                  leftMargin: units.gu(1)
                  right: __indicators.left
-+                // HAX: extra margin for left side of curved screen corners
++                // HAX: extra margin for right side of curved screen corners
 -                rightMargin: units.gu(1)
-+                rightMargin: units.gu(4.1)
++                rightMargin: units.gu(4)
              }
 diff --color -ru a/usr/share/unity8/Panel/PanelBar.qml b/usr/share/unity8/Panel/PanelBar.qml
 --- a/usr/share/unity8/Panel/PanelBar.qml	2021-01-14 18:25:16.111002000 +0200
