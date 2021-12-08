@@ -32,7 +32,7 @@ diff --color -ru a/usr/share/unity8/Panel/PanelMenu.qml b/usr/share/unity8/Panel
              left: parent.left
              right: parent.right
 +            // HAX: extra margin for right side of curved screen corners
-+            rightMargin: expanded ? 0 : -units.gu(7.8)
++            rightMargin: expanded ? 0 : units.gu(9.8)
          }
          expanded: false
          enableLateralChanges: false
