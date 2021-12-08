@@ -20,7 +20,7 @@ diff --color -ru a/usr/share/unity8/Panel/PanelBar.qml b/usr/share/unity8/Panel/
              anchors.fill: parent
 +            // HAX: offset items to match expanded panel mode while oriented upright
 +            // FIXME: make it possible to scroll using the empty space above
-+            anchors.topMargin: (expanded && shell.orientationAngle == 0) ? 64 : 0
++            anchors.topMargin: (expanded && shell.orientationAngle == 0) ? 80 : 0
              contentWidth: row.width
              contentX: d.combinedOffset
              interactive: false
