@@ -3,7 +3,7 @@
              left: parent.left
              right: parent.right
 +            // HAX: extra margin for right side of curved screen corners
-+            rightMargin: expanded ? 0 : units.gu(3.8)
++            rightMargin: units.gu(3.8)
          }
          expanded: false
          enableLateralChanges: false
